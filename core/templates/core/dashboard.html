@@ -1,0 +1,15 @@
+<h2>Schedule New Post</h2>
+<form method="POST">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit">Schedule</button>
+</form>
+
+<h3>My Posts</h3>
+<ul>
+  {% for post in posts %}
+  <li>
+    {{ post.caption }} - {{ post.scheduled_time }} - Published: {{
+    post.is_published }}
+  </li>
+  {% endfor %}
+</ul>
