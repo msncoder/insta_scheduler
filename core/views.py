@@ -6,9 +6,9 @@ from django.contrib.auth.decorators import login_required
 
 FB_CLIENT_ID = '1966380890557042'
 FB_CLIENT_SECRET = '371fda25820f19b04553a9188f69af70'
-REDIRECT_URI = 'http://localhost:8000/facebook-callback/'
+REDIRECT_URI = 'https://ee07-39-39-124-82.ngrok-free.app/facebook-callback/'
 
-@login_required
+# @login_required
 def facebook_login(request):
     url = f"https://www.facebook.com/v19.0/dialog/oauth?client_id={FB_CLIENT_ID}&redirect_uri={REDIRECT_URI}&scope=pages_show_list,instagram_basic,instagram_content_publish,pages_read_engagement"
     return redirect(url)

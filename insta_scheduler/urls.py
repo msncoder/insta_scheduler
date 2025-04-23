@@ -24,7 +24,8 @@ urlpatterns = [
     path('facebook-login/', views.facebook_login, name='facebook_login'),
     path('facebook-callback/', views.facebook_callback, name='facebook_callback'),
     path('dashboard/', views.dashboard, name='dashboard'),
-    path('privacy-policy/', TemplateView.as_view(template_name="core/privacy_policy.html"), name='privacy_policy')
+    path('privacy-policy/', TemplateView.as_view(template_name="core/privacy_policy.html"), name='privacy_policy'),
+    path('data-deletion/', TemplateView.as_view(template_name="core/data_deletion.html"), name='data_deletion'),
 
 ]
 
